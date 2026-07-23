@@ -17,9 +17,7 @@ import { BatchWriteService, BATCH_WRITE_SERVICE } from 'src/app/core/store/batch
 export class WeeklyGoalsHeaderComponent implements OnInit {
   readonly authStore = inject(AuthStore);
   // --------------- INPUTS AND OUTPUTS ------------------
-
-  /** The current signed in user. */
-  currentUser: Signal<User> = this.authStore.user;
+  editClicked = output<boolean>();
 
   // --------------- LOCAL UI STATE ----------------------
 
@@ -29,7 +27,9 @@ export class WeeklyGoalsHeaderComponent implements OnInit {
   // --------------- COMPUTED DATA -----------------------
 
   // --------------- EVENT HANDLING ----------------------
-
+  editGoals() {
+     this.editClicked.emit(true);
+  }
   // --------------- OTHER -------------------------------
 
   constructor(

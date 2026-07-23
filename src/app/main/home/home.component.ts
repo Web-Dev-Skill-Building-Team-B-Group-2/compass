@@ -4,7 +4,8 @@ import { User } from 'src/app/core/store/user/user.model';
 import { AuthStore } from 'src/app/core/store/auth/auth.store';
 import { BatchWriteService, BATCH_WRITE_SERVICE } from 'src/app/core/store/batch-write.service';
 import { NavbarComponent } from 'src/app/shared/navbar/navbar.component';
-import { GreetingComponent } from 'src/app/main/home/greeting/greeting.component'
+import { WeeklyGoalsComponent } from './weekly-goals/weekly-goals.component';
+import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { GreetingComponent } from 'src/app/main/home/greeting/greeting.component
   animations: HomeAnimations,
   imports: [
     NavbarComponent,
+    WeeklyGoalsComponent,
     GreetingComponent
   ]
 })

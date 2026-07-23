@@ -1,1 +1,22 @@
 // Add any extra data types you'll need here!
+import { WeeklyGoal } from '../../core/store/weekly-goal/weekly-goal.model';
+import { Hashtag } from '../../core/store/hashtag/hashtag.model';
+import { QuarterlyGoal } from '../../core/store/quarterly-goal/quarterly-goal.model';
+export interface WeeklyGoalData extends WeeklyGoal {
+  hashtag: Hashtag;
+}
+export interface QuarterlyGoalData extends QuarterlyGoal {
+  hashtag: Hashtag;
+  weeklyGoalsTotal: number;
+  weeklyGoalsComplete: number;
+}
+export interface WeeklyGoalInForm {
+  text: string;
+  __quarterlyGoalId: string;
+  _deleted: boolean;
+  originalText?: string;
+  __weeklyGoalId?: string;
+  originalOrder?: number;
+  originalQuarterlyGoalId?: string;
+  _new: boolean;
+}
