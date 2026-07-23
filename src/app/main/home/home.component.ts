@@ -17,7 +17,8 @@ import { GreetingComponent } from './greeting/greeting.component';
   imports: [
     NavbarComponent,
     WeeklyGoalsComponent,
-    GreetingComponent]
+    GreetingComponent
+  ]
 })
 export class HomeComponent implements OnInit {
   authStore = inject(AuthStore);
